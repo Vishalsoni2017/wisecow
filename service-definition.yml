@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: pod-service
+spec:
+  ports:
+    - port: 80
+      targetPort: 4499
+  type: ClusterIP
+  selector:
+    app: wisecow
