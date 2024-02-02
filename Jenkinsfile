@@ -21,7 +21,7 @@ pipeline {
             }
         }
         
-        stage("Create Kubectl wise pod"){
+        stage("Create Kubectl wisecow pod"){
             steps{
                 sh " cd wisecow && kubectl create -f pod-definition.yml"
             }
