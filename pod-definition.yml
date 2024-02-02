@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: app-accuknow
+  labels:
+    app: wisecow
+spec:
+  containers:
+    - name: pod-accuknow
+      image: vishalsoni2017/accuknow:2.1
+      ports:
+        - containerPort: 4499
