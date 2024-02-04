@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: accuknow-ingress
+spec:
+  tls:
+    - secretName: accuknow.wise.com-tls
+      hosts:
+        - accuknow.wise.com
+
+  rules:
+    - host: accuknow.wise.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: pod-service
+                port:
+                  number: 80
